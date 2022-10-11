@@ -19,7 +19,7 @@ namespace Lab_10_ATM_Simulator
 
             String newUser = " ";
             String newPassword = " ";
-            double newBalance;
+            int newBalance;
             //////////////////////////////////////////////////////////////////
             int input = 0;
             do
@@ -44,7 +44,7 @@ namespace Lab_10_ATM_Simulator
                     {
                         Console.WriteLine("Enter initial Deposit amount: ");
                         string nBalance = Console.ReadLine();
-                        if(Double.TryParse(nBalance, out newBalance))
+                        if(int.TryParse(nBalance, out newBalance))
                         {
                             break;
                         }
@@ -183,7 +183,7 @@ namespace Lab_10_ATM_Simulator
             static void Deposit(User currentUser)
             {
                 Console.WriteLine("Deposit Amount?: \n");
-                double deposit = Double.Parse(Console.ReadLine());
+                double deposit = int.Parse(Console.ReadLine());
                 if( deposit < 0)
                 {
                     Console.WriteLine("Not a valid deposit amount.");

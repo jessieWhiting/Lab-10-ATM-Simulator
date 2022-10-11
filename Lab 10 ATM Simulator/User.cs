@@ -11,11 +11,11 @@ namespace Lab_10_ATM_Simulator
         //Set to public to use throughout program
         public String UserName;
         public String Password;
-        public double Balance;
-        public double OriginBalance;
+        public int Balance;
+        public int OriginBalance;
 
 
-        public User(string userName, string password, double balance)
+        public User(string userName, string password, int balance)
         {
             this.UserName = userName;
             this.Password = password;   
