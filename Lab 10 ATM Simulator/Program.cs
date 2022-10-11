@@ -183,7 +183,7 @@ namespace Lab_10_ATM_Simulator
             static void Deposit(User currentUser)
             {
                 Console.WriteLine("Deposit Amount?: \n");
-                double deposit = int.Parse(Console.ReadLine());
+                int deposit = int.Parse(Console.ReadLine());
                 if( deposit < 0)
                 {
                     Console.WriteLine("Not a valid deposit amount.");
@@ -196,7 +196,7 @@ namespace Lab_10_ATM_Simulator
             static void Withdraw(User currentUser)
             {
                 Console.WriteLine("Withdrawal Amount?: \n");
-                double withdrawal = Double.Parse(Console.ReadLine());
+                int withdrawal = int.Parse(Console.ReadLine());
                 //Check if user has enough money
                 if (currentUser.GetBalance() < withdrawal)
                 {
