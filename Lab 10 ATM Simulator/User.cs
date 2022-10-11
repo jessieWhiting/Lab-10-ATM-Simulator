@@ -33,13 +33,13 @@ namespace Lab_10_ATM_Simulator
             return Balance;
         }
        
-        public void Deposit(double deposit)
+        public void Deposit(int deposit)
         {
             OriginBalance = Balance;
             Balance += deposit;
         }
 
-        public void Withdraw(double withdraw)
+        public void Withdraw(int withdraw)
         {
             OriginBalance = Balance;
             Balance -= withdraw;
