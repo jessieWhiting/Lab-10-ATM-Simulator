@@ -205,6 +205,7 @@ namespace Lab_10_ATM_Simulator
                 else if (withdrawal < 0)
                 {
                     Console.WriteLine("Not a valid withdrawal amount.");
+                    return ;
                 }
                 else
                 {
