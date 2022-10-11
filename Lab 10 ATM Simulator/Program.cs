@@ -184,6 +184,11 @@ namespace Lab_10_ATM_Simulator
             {
                 Console.WriteLine("Deposit Amount?: \n");
                 double deposit = Double.Parse(Console.ReadLine());
+                if( deposit < 0)
+                {
+                    Console.WriteLine("Not a valid deposit amount.");
+                    return;
+                }
                 currentUser.Deposit(deposit);
                 Console.WriteLine($"Deposit Amount: ${deposit} New Balance: ${currentUser.GetBalance()}");
             }
@@ -196,6 +201,10 @@ namespace Lab_10_ATM_Simulator
                 if (currentUser.GetBalance() < withdrawal)
                 {
                     Console.WriteLine("Insufficient Funds.");
+                }
+                else if (withdrawal < 0)
+                {
+                    Console.WriteLine("Not a valid withdrawal amount.");
                 }
                 else
                 {
